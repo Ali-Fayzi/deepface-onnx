@@ -1,0 +1,8 @@
+gdown
+matplotlib
+numpy
+onnxruntime
+onnxruntime-gpu
+opencv_contrib_python
+opencv_python
+opencv_python_headless
