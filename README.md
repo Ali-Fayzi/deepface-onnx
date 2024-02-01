@@ -61,5 +61,6 @@ plt.imshow(face[...,::-1])
 plt.subplot(1,2,2)
 plt.title(f"Age:{age_output}")
 plt.imshow(face[...,::-1])
-plt.show()```
+plt.show()
+```
 ![Face Analyis Result](https://raw.githubusercontent.com/Ali-Fayzi/deepface-onnx/master/output/face_analyis.png)
