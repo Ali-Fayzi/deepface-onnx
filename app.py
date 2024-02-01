@@ -1,5 +1,5 @@
 import cv2 
-from utils import DeepFace , FaceAnalyis
+from utils import DeepFace , FaceAnalysis
 from matplotlib import pyplot as plt 
 
 if __name__ == "__main__":
