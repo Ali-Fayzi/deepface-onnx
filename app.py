@@ -1,5 +1,5 @@
 import cv2 
-from utils import DeepFace , FaceAnalyis
+from utils import DeepFace , FaceAnalysis
 from matplotlib import pyplot as plt 
 
 if __name__ == "__main__":
@@ -29,8 +29,8 @@ if __name__ == "__main__":
         "emotion"
     ]
 
-    age             = FaceAnalyis(model_name=face_analyis_models[0])
-    emotion         = FaceAnalyis(model_name=face_analyis_models[-1])
+    age             = FaceAnalysis(model_name=face_analyis_models[0])
+    emotion         = FaceAnalysis(model_name=face_analyis_models[-1])
     face            = cv2.imread("./test_images/ali_1.png")
     age_output      = age.predict(input=face)
     emotion_output  = emotion.predict(input=face)
