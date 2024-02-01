@@ -1,7 +1,7 @@
 # DeepFace-ONNX
 
 
-## Usage
+## Face Verification Models
 ```
 git clone https://github.com/Ali-Fayzi/deepface-onnx.git
 cd deepface-onnx
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 ![Face Verification Result](https://raw.githubusercontent.com/Ali-Fayzi/deepface-onnx/master/output/deepface-onnx-3.png)
 
 
-##Face Analyis
+## Face Analyis Models
 ```python
 import cv2 
 from utils import FaceAnalysis 
