@@ -36,3 +36,30 @@ if __name__ == "__main__":
 ![Face Verification Result](https://raw.githubusercontent.com/Ali-Fayzi/deepface-onnx/master/output/deepface-onnx.png)
 ![Face Verification Result](https://raw.githubusercontent.com/Ali-Fayzi/deepface-onnx/master/output/deepface-onnx-2.png)
 ![Face Verification Result](https://raw.githubusercontent.com/Ali-Fayzi/deepface-onnx/master/output/deepface-onnx-3.png)
+
+
+##Face Analyis
+```python
+import cv2 
+from utils import FaceAnalysis 
+from matplotlib import pyplot as plt 
+face_analyis_models = [
+    "age",
+    "gender",
+    "race",
+    "emotion"
+]
+
+age             = FaceAnalysis(model_name=face_analyis_models[0])
+emotion         = FaceAnalysis(model_name=face_analyis_models[-1])
+face            = cv2.imread("./test_images/ali_1.png")
+age_output      = age.predict(input=face)
+emotion_output  = emotion.predict(input=face)
+plt.subplot(1,2,1)
+plt.title(f"Emotion:{emotion_output}")
+plt.imshow(face[...,::-1])
+plt.subplot(1,2,2)
+plt.title(f"Age:{age_output}")
+plt.imshow(face[...,::-1])
+plt.show()```
+![Face Analyis Result](https://raw.githubusercontent.com/Ali-Fayzi/deepface-onnx/master/output/face_analyis.png)
