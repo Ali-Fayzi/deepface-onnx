@@ -1,5 +1,5 @@
 
-def find_target_size(model_name):
+def find_verification_model_target_size(model_name):
     target_sizes = {
         "vggface": (224, 224),
         "facenet128": (160, 160),
@@ -7,6 +7,19 @@ def find_target_size(model_name):
         "openface": (96, 96),
         "deepid": (47, 55),
         "arcFace": (112, 112),
+    }
+    target_size = target_sizes.get(model_name.lower())
+    if target_size == None:
+        raise ValueError(f"unimplemented model name - {model_name}")
+    return target_size
+
+
+def find_analyis_model_target_size(model_name):
+    target_sizes = {
+        "age"       : (224, 224),
+        "emotion"   : (48, 48),
+        "gender"    : (224, 224),
+        "race"      : (224, 224),
     }
     target_size = target_sizes.get(model_name.lower())
     if target_size == None:
